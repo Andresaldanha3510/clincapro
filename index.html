@@ -4,225 +4,673 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ClínicaSys Pro | Sistema Médico com IA e Painel TV</title>
-    <meta name="description" content="O software médico mais moderno do Brasil. Prontuário com Inteligência Artificial, Painel de Senhas para TV e Gestão Financeira. Sem mensalidade.">
-    <meta name="keywords" content="sistema médico, prontuário eletrônico, software gestão clinica, inteligencia artificial medicina, sistema consultório, clinicasys">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://clinicasys.onrender.com">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ClínicaSys Pro - Oferta R$ 287,00">
-    <meta property="og:description" content="Sistema completo com IA e TV. Oferta vitalícia por tempo limitado.">
-    <meta property="og:image" content="https://clinicasys.onrender.com/static/print_ia.png">
-    <meta property="og:url" content="https://clinicasys.onrender.com">
-
+    <title>ClínicaSys Pro | Gestão Médica Inteligente</title>
+    <meta name="description" content="Software médico completo com IA avançada, Painel de TV, Prontuário Digital e Financeiro. Oferta exclusiva R$ 287,00 pagamento único.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "ClínicaSys Pro",
-      "applicationCategory": "MedicalApplication",
-      "operatingSystem": "Windows 10, Windows 11",
-      "offers": {
-        "@type": "Offer",
-        "price": "287.00",
-        "priceCurrency": "BRL",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "124"
-      }
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
         .gradient-text {
             background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+        
         .hero-bg {
-            background-color: #111827;
-            background-image: radial-gradient(circle at 50% 50%, #1f2937 0%, #111827 50%);
+            background-color: #0f172a;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%);
+            position: relative;
         }
-        .zap-btn {
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .zap-btn { 
             animation: pulse 2s infinite;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .zap-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .zap-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 20px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
-        .price-tag {
-            transform: rotate(-2deg);
+        
+        .mockup-img {
+            border-radius: 16px;
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255,255,255,0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .mockup-img:hover { 
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 35px 60px -12px rgba(0, 0, 0, 0.35),
+                0 0 0 1px rgba(255,255,255,0.15);
+        }
+        
+        .feature-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .stat-number {
+            animation: countUp 2s ease-out;
+        }
+        
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .glow-effect {
+            position: relative;
+        }
+        
+        .glow-effect::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #10B981, #3B82F6);
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+            filter: blur(10px);
+        }
+        
+        .glow-effect:hover::after {
+            opacity: 0.6;
+        }
+        
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: reveal 0.8s ease-out forwards;
+        }
+        
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .badge-shimmer {
+            background: linear-gradient(90deg, #10B981 0%, #059669 50%, #10B981 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .price-old {
+            position: relative;
+        }
+
+        .price-old::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 3px;
+            background: #ef4444;
+            transform: rotate(-5deg);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-900">
 
-    <header class="hero-bg text-white pt-16 pb-32 px-6 text-center relative overflow-hidden">
-        <div class="max-w-5xl mx-auto relative z-10">
-            
-            <div class="price-tag inline-block bg-yellow-400 text-gray-900 font-extrabold px-6 py-2 rounded-lg shadow-lg mb-8 text-lg border-2 border-yellow-200">
-                🔥 OFERTA RELÂMPAGO: De <span class="line-through text-gray-600 decoration-red-600">R$ 997</span> por R$ 287
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-slate-900/95 backdrop-blur-sm text-white z-50 py-4 px-6 shadow-lg">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="font-black text-2xl gradient-text" style="-webkit-text-fill-color: white;">ClínicaSys Pro</div>
+            <a href="https://wa.me/5541996080232?text=Olá, quero aproveitar a oferta de 287 reais do ClínicaSys Pro." 
+               class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition-all">
+               Falar no WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white pt-32 pb-48 px-6 text-center relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10 section-reveal">
+            <div class="inline-block badge-shimmer text-white font-bold px-5 py-2 rounded-full text-sm mb-8 tracking-wide uppercase shadow-lg">
+                🔥 Oportunidade Única: Licença Vitalícia
             </div>
 
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                Gestão Médica com <br>
-                <span class="gradient-text">Inteligência Artificial</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+                Software Médico com <br>
+                <span class="gradient-text">IA de Última Geração</span>
             </h1>
             
-            <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                O único sistema que analisa prontuários, sugere CIDs e gerencia sua TV de espera. 
-                <span class="text-white font-bold">Sem mensalidade. Pagamento único.</span>
+            <p class="text-lg md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Prontuário SOAP, Painel de TV, Financeiro e Agenda. <br>
+                <span class="text-white font-bold text-3xl block mt-4">Tudo por apenas R$ 287</span>
+                <span class="text-emerald-400 font-semibold">Sem mensalidades. Para sempre.</span>
             </p>
             
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/5541996080232?text=Olá, quero aproveitar a oferta de 287 reais do ClínicaSys." 
-                   class="zap-btn bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-xl flex items-center justify-center gap-2 transition-all w-full md:w-auto shadow-green-900/50 shadow-lg">
-                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                   Comprar Agora (WhatsApp)
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-12">
+                <a href="https://wa.me/5541996080232?text=Olá, quero aproveitar a oferta de 287 reais do ClínicaSys Pro." 
+                   class="zap-btn bg-green-500 hover:bg-green-600 text-white font-extrabold py-6 px-14 rounded-2xl text-2xl flex items-center justify-center gap-3 shadow-2xl transition-all">
+                   <span>💬</span> Garantir Minha Licença Agora
                 </a>
-                <p class="text-xs text-gray-500 mt-2 md:mt-0">⚡ Ativação Imediata</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-slate-400">
+                <span>✓ Instalação Imediata</span>
+                <span>✓ Suporte VIP Incluso</span>
+                <span>✓ Atualizações Gratuitas</span>
             </div>
         </div>
         
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
-            <div class="absolute -top-20 -left-20 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-            <div class="absolute top-0 -right-20 w-96 h-96 bg-green-600 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <!-- Wave Divider -->
+        <div class="absolute -bottom-1 left-0 w-full">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f8fafc"/>
+            </svg>
         </div>
     </header>
 
-    <section class="py-20 px-6 max-w-6xl mx-auto -mt-20 relative z-20">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-500 hover:-translate-y-2 transition-transform">
-                <div class="text-4xl mb-4">🤖</div>
-                <h3 class="text-xl font-bold mb-2">IA Gemini Integrada</h3>
-                <p class="text-gray-600 text-sm">
-                    Seu copiloto médico. A IA lê o histórico, sugere CIDs, avisa sobre alergias e resume casos complexos em segundos.
-                </p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-green-500 hover:-translate-y-2 transition-transform">
-                <div class="text-4xl mb-4">📺</div>
-                <h3 class="text-xl font-bold mb-2">Painel de TV Wi-Fi</h3>
-                <p class="text-gray-600 text-sm">
-                    Recepção de cinema. Conecte qualquer Smart TV ao Wi-Fi e chame pacientes com voz e nome. Sem cabos HDMI.
-                </p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-500 hover:-translate-y-2 transition-transform">
-                <div class="text-4xl mb-4">💰</div>
-                <h3 class="text-xl font-bold mb-2">Sem Mensalidade</h3>
-                <p class="text-gray-600 text-sm">
-                    Chega de pagar aluguel de software. Pague R$ 287,00 uma única vez e o sistema é seu para sempre.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white overflow-hidden">
+    <!-- Social Proof -->
+    <section class="py-12 bg-slate-50 border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-8 text-center max-w-3xl mx-auto">
+                <div>
+                    <div class="text-4xl font-black text-blue-600 stat-number">24/7</div>
+                    <div class="text-slate-600 text-sm mt-2">Suporte VIP</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-black text-slate-900 stat-number">∞</div>
+                    <div class="text-slate-600 text-sm mt-2">Usuários Ilimitados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IA Feature -->
+    <section class="py-28 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 section-reveal">
+                    <div class="inline-block bg-emerald-100 text-emerald-700 font-bold px-4 py-2 rounded-full text-sm mb-4">
+                        🤖 Inteligência Artificial
+                    </div>
+                    <h2 class="text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                        A IA que automatiza<br>o seu consultório
+                    </h2>
+                    <p class="text-slate-600 text-xl mb-10 leading-relaxed">
+                        Nossa <strong class="text-emerald-600">IA Avançada</strong> analisa o atendimento em tempo real, sugere CIDs, resume casos complexos e redige automaticamente a anamnese técnica.
+                    </p>
+                    <div class="space-y-5">
+                        <div class="feature-card bg-white p-5 rounded-xl flex items-start gap-4">
+                            <span class="text-3xl">🎯</span>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Sugestão inteligente de CID-10</h4>
+                                <p class="text-slate-600 text-sm">Identifica automaticamente os códigos mais adequados</p>
+                            </div>
+                        </div>
+                        <div class="feature-card bg-white p-5 rounded-xl flex items-start gap-4">
+                            <span class="text-3xl">⚠️</span>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Alerta de alergias e riscos</h4>
+                                <p class="text-slate-600 text-sm">Proteção automática para seus pacientes</p>
+                            </div>
+                        </div>
+                        <div class="feature-card bg-white p-5 rounded-xl flex items-start gap-4">
+                            <span class="text-3xl">⚡</span>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Economia de 5h+ por semana</h4>
+                                <p class="text-slate-600 text-sm">Menos burocracia, mais tempo para seus pacientes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 floating">
+                    <img src="static/print_ia.png" alt="IA ClínicaSys Pro" class="mockup-img w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Feature -->
+    <section class="py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+                <div class="md:w-1/2 section-reveal">
+                    <div class="inline-block bg-blue-100 text-blue-700 font-bold px-4 py-2 rounded-full text-sm mb-4">
+                        📊 Dashboard Inteligente
+                    </div>
+                    <h2 class="text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                        Controle Total em<br>uma única tela
+                    </h2>
+                    <p class="text-slate-600 text-xl mb-10 leading-relaxed">
+                        Dashboard desenhado para médicos que <strong class="text-blue-600">não têm tempo a perder</strong>. Gerencie sua agenda, veja quem já chegou e acompanhe o financeiro em tempo real.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="feature-card bg-slate-50 p-4 rounded-xl text-center">
+                            <div class="text-3xl mb-2">📅</div>
+                            <div class="font-bold text-slate-900">Agenda intuitiva</div>
+                        </div>
+                        <div class="feature-card bg-slate-50 p-4 rounded-xl text-center">
+                            <div class="text-3xl mb-2">🎨</div>
+                            <div class="font-bold text-slate-900">Status por cores</div>
+                        </div>
+                        <div class="feature-card bg-slate-50 p-4 rounded-xl text-center">
+                            <div class="text-3xl mb-2">💰</div>
+                            <div class="font-bold text-slate-900">Faturamento do dia</div>
+                        </div>
+                        <div class="feature-card bg-slate-50 p-4 rounded-xl text-center">
+                            <div class="text-3xl mb-2">🔍</div>
+                            <div class="font-bold text-slate-900">Busca ultra-rápida</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 floating" style="animation-delay: 0.5s;">
+                    <img src="static/print_dash.png" alt="Dashboard do Sistema" class="mockup-img w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TV Panel Feature -->
+    <section class="py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-20 section-reveal">
+                <div class="inline-block bg-white/10 text-white font-bold px-4 py-2 rounded-full text-sm mb-4">
+                    📺 Tecnologia Premium
+                </div>
+                <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    Sua Recepção Moderna<br>e Profissional
+                </h2>
+                <p class="text-slate-300 text-xl leading-relaxed">
+                    Chame seus pacientes de forma elegante através de qualquer Smart TV.<br>
+                    <span class="text-emerald-400 font-bold">Sem fios, sem adaptadores. Apenas Wi-Fi.</span>
+                </p>
+            </div>
             
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
-                <div class="md:w-1/2">
-                    <span class="text-green-500 font-bold tracking-wider uppercase text-sm">Inteligência Artificial</span>
-                    <h3 class="text-3xl font-extrabold text-gray-900 mt-2 mb-4">Seu Copiloto Clínico</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        Enquanto você atende, a IA analisa o histórico do paciente, sugere diagnósticos (CID-10) e alerta sobre interações medicamentosas. É como ter um segundo especialista na sala.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-gray-700">
-                            <span class="bg-green-100 text-green-600 p-1 rounded-full mr-3 text-xs">✔️</span>
-                            Sugestão automática de CID
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <span class="bg-green-100 text-green-600 p-1 rounded-full mr-3 text-xs">✔️</span>
-                            Redação de prontuário automática
-                        </li>
-                    </ul>
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="relative group">
+                    <div class="absolute -inset-2 bg-blue-500 rounded-2xl opacity-20 blur-2xl group-hover:opacity-40 transition-all duration-500"></div>
+                    <img src="static/print_tv.png" alt="Painel na TV" class="relative mockup-img w-full">
                 </div>
-                <div class="md:w-1/2 relative">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-green-300 to-blue-400 rounded-2xl opacity-30 blur-lg transform rotate-2"></div>
-                    <img src="static/print_ia.png" alt="Tela da Inteligência Artificial Médica" class="relative rounded-lg shadow-2xl border border-gray-200 transform transition hover:-translate-y-1">
+                <div class="relative group">
+                    <div class="absolute -inset-2 bg-emerald-500 rounded-2xl opacity-20 blur-2xl group-hover:opacity-40 transition-all duration-500"></div>
+                    <img src="static/print_sala_espera.png" alt="Gestão de Espera" class="relative mockup-img w-full">
                 </div>
             </div>
-
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
-                <div class="md:w-1/2">
-                    <span class="text-blue-500 font-bold tracking-wider uppercase text-sm">Painel de TV</span>
-                    <h3 class="text-3xl font-extrabold text-gray-900 mt-2 mb-4">Recepção Moderna</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        Elimine os gritos na recepção. Conecte qualquer Smart TV ao Wi-Fi e chame seus pacientes com voz e visual profissional.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-gray-700">
-                            <span class="bg-blue-100 text-blue-600 p-1 rounded-full mr-3 text-xs">✔️</span>
-                            Chamada por voz automática
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <span class="bg-blue-100 text-blue-600 p-1 rounded-full mr-3 text-xs">✔️</span>
-                            Previsão do tempo e notícias
-                        </li>
-                    </ul>
-                </div>
-                <div class="md:w-1/2 relative">
-                    <div class="absolute -inset-4 bg-gradient-to-l from-blue-300 to-purple-400 rounded-2xl opacity-30 blur-lg transform -rotate-2"></div>
-                    <img src="static/print_tv.png" alt="Painel de Senhas na TV" class="relative rounded-lg shadow-2xl border border-gray-200 transform transition hover:-translate-y-1">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="py-20 px-6 max-w-4xl mx-auto text-center bg-gray-50">
-        <h2 class="text-3xl font-bold mb-6">Por que escolher o ClínicaSys Pro?</h2>
-        <div class="grid md:grid-cols-2 gap-8 text-left">
-            <div class="bg-white p-6 rounded-lg border border-red-100 shadow-sm opacity-70">
-                <h4 class="font-bold text-gray-500 mb-4">❌ Sistemas Tradicionais</h4>
-                <ul class="space-y-3 text-sm text-gray-500">
-                    <li class="flex gap-2"><span>🚫</span> Mensalidades caras (R$ 200+/mês)</li>
-                    <li class="flex gap-2"><span>🚫</span> Interface antiga e lenta</li>
-                    <li class="flex gap-2"><span>🚫</span> Cobram por suporte ou instalação</li>
-                    <li class="flex gap-2"><span>🚫</span> Sem Inteligência Artificial</li>
-                </ul>
-            </div>
-            <div class="bg-white p-8 rounded-lg border-2 border-green-500 shadow-xl transform md:scale-105 relative">
-                <div class="absolute -top-3 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">RECOMENDADO</div>
-                <h4 class="font-bold text-green-600 mb-4 text-xl">✅ ClínicaSys Pro</h4>
-                <ul class="space-y-3 text-sm text-gray-800 font-medium">
-                    <li class="flex gap-2 items-center"><span class="text-green-500">✔</span> <strong>Pagamento Único: R$ 287,00</strong></li>
-                    <li class="flex gap-2 items-center"><span class="text-green-500">✔</span> IA que escreve a evolução por você</li>
-                    <li class="flex gap-2 items-center"><span class="text-green-500">✔</span> Suporte direto via WhatsApp</li>
-                    <li class="flex gap-2 items-center"><span class="text-green-500">✔</span> Instalação ilimitada em rede</li>
-                </ul>
+            
+            <div class="flex flex-wrap justify-center gap-8 text-slate-300 font-bold text-lg">
+                <span class="flex items-center gap-2">⚡ Sem cabos HDMI</span>
+                <span class="flex items-center gap-2">📡 Conexão Wi-Fi</span>
+                <span class="flex items-center gap-2">✨ Organização Total</span>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-16 px-6 text-center">
-        <h2 class="text-3xl font-bold mb-4">Últimas licenças deste lote</h2>
-        
-        <div class="mb-8">
-            <span class="text-gray-400 text-xl line-through mr-2">De R$ 997,00</span>
-            <span class="text-4xl md:text-5xl font-extrabold text-green-400">R$ 287,00</span>
-            <p class="text-sm text-gray-400 mt-2">Pagamento único • Acesso Vitalício</p>
+    <!-- Complete Management -->
+    <section class="py-28 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20 section-reveal">
+                <div class="inline-block bg-slate-200 text-slate-700 font-bold px-4 py-2 rounded-full text-sm mb-4">
+                    🏥 Sistema Completo
+                </div>
+                <h2 class="text-5xl font-extrabold mb-6">Gestão Completa de Ponta a Ponta</h2>
+                <p class="text-slate-600 text-xl max-w-2xl mx-auto">
+                    Tudo que sua clínica precisa em um único sistema integrado
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="group section-reveal bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-4xl">📋</span>
+                        <h4 class="text-3xl font-bold text-slate-800">Prontuário & Pacientes</h4>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl mb-6">
+                        <img src="static/print_pacientes.png" alt="Prontuário" class="w-full transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Histórico detalhado com <strong>anexos ilimitados</strong> e busca inteligente por CPF ou Nome. Organize todos os dados dos seus pacientes com segurança e praticidade.
+                    </p>
+                </div>
+                
+                <div class="group section-reveal bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-4xl">💵</span>
+                        <h4 class="text-3xl font-bold text-slate-800">Financeiro & Repasses</h4>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl mb-6">
+                        <img src="static/print_financeiro.png" alt="Financeiro" class="w-full transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Controle total de <strong>fluxo de caixa</strong> e cálculo automático de comissões. Gerencie toda a parte financeira da sua clínica com relatórios completos.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <a href="https://wa.me/5541996080232?text=Olá, quero garantir minha licença vitalícia por 287 reais." 
-           class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-12 rounded-lg text-xl shadow-lg hover:shadow-green-500/50 transition-all animate-bounce">
-           GARANTIR PREÇO PROMOCIONAL
-        </a>
-        
-        <div class="mt-12 text-xs text-gray-600 border-t border-gray-800 pt-8">
-            &copy; 2025 ClínicaSys Tecnologia.<br>
-            Curitiba - PR | Suporte: (41) 99608-0232
+    <!-- Pricing CTA -->
+    <section class="py-28 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-br from-emerald-600 via-emerald-700 to-blue-700 rounded-[3rem] p-12 md:p-16 text-white text-center shadow-2xl relative overflow-hidden glow-effect">
+                <!-- Decorative Elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10">
+                    <div class="inline-block bg-white/20 backdrop-blur-sm text-white font-bold px-6 py-3 rounded-full text-sm mb-8 tracking-wide uppercase">
+                        ⚡ Últimas Licenças Disponíveis
+                    </div>
+                    
+                    <h3 class="text-4xl md:text-6xl font-black mb-10 uppercase tracking-tight leading-tight">
+                        Lote de Lançamento<br>
+                        <span class="text-yellow-300">Está Acabando!</span>
+                    </h3>
+                    
+                    <div class="mb-12">
+                        <div class="price-old text-slate-200 text-3xl mb-2 inline-block px-4">
+                            De R$ 997,00
+                        </div>
+                        <div class="text-7xl md:text-8xl font-black my-4">
+                            R$ 287<sup class="text-4xl">,00</sup>
+                        </div>
+                        <div class="inline-block bg-yellow-400 text-slate-900 font-black px-6 py-3 rounded-full text-lg tracking-widest">
+                            PAGAMENTO ÚNICO • SEM MENSALIDADES
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🎯</div>
+                            <div class="font-bold text-lg">Suporte VIP WhatsApp</div>
+                            <div class="text-sm text-slate-200 mt-2">Atendimento prioritário</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🌐</div>
+                            <div class="font-bold text-lg">Rede Ilimitada</div>
+                            <div class="text-sm text-slate-200 mt-2">Quantos computadores quiser</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                            <div class="text-4xl mb-3">📺</div>
+                            <div class="font-bold text-lg">Painel de TV</div>
+                            <div class="text-sm text-slate-200 mt-2">Já incluso no pacote</div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5541996080232?text=Olá, quero garantir minha licença vitalícia por 287 reais." 
+                       class="inline-block bg-white text-emerald-700 hover:bg-yellow-300 hover:text-slate-900 font-black py-7 px-16 rounded-2xl text-3xl shadow-2xl transition-all duration-300 transform hover:scale-105">
+                       🚀 GARANTIR MINHA LICENÇA AGORA
+                    </a>
+                    
+                    <p class="mt-8 text-slate-200 text-sm">
+                        ✅ Instalação imediata após confirmação de pagamento
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-28 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-5xl font-extrabold mb-6">Perguntas Frequentes</h2>
+                <p class="text-slate-600 text-xl">Tire suas dúvidas sobre o ClínicaSys Pro</p>
+            </div>
+            
+            <div class="space-y-4">
+                <details class="feature-card bg-white rounded-2xl p-6 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-900 list-none flex justify-between items-center">
+                        O pagamento é realmente único?
+                        <span class="text-2xl">+</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">
+                        Sim! Você paga apenas R$ 287,00 uma única vez e tem acesso vitalício ao sistema, incluindo todas as atualizações futuras. Sem mensalidades, sem taxas escondidas.
+                    </p>
+                </details>
+                
+                <details class="feature-card bg-white rounded-2xl p-6 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-900 list-none flex justify-between items-center">
+                        Posso instalar em quantos computadores?
+                        <span class="text-2xl">+</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">
+                        Ilimitados! Você pode instalar o ClínicaSys Pro em todos os computadores da sua clínica, em rede local, sem custo adicional por estação de trabalho.
+                    </p>
+                </details>
+                
+                <details class="feature-card bg-white rounded-2xl p-6 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-900 list-none flex justify-between items-center">
+                        Como funciona o suporte técnico?
+                        <span class="text-2xl">+</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">
+                        Oferecemos suporte VIP direto via WhatsApp. Nossa equipe técnica está disponível para ajudar com instalação, configuração e dúvidas sobre o sistema.
+                    </p>
+                </details>
+                
+                <details class="feature-card bg-white rounded-2xl p-6 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-900 list-none flex justify-between items-center">
+                        O painel de TV funciona em qualquer Smart TV?
+                        <span class="text-2xl">+</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">
+                        Sim! Funciona em qualquer Smart TV conectada à mesma rede Wi-Fi. Não precisa de cabos HDMI, adaptadores ou equipamentos extras. É só acessar via navegador.
+                    </p>
+                </details>
+                
+                <details class="feature-card bg-white rounded-2xl p-6 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-900 list-none flex justify-between items-center">
+                        A IA funciona offline?
+                        <span class="text-2xl">+</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">
+                        As funcionalidades principais do sistema funcionam offline. A IA precisa de conexão com internet para processar as sugestões e análises em tempo real.
+                    </p>
+                </details>
+                
+                <details class="feature-card bg-white rounded-2xl p-6 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-900 list-none flex justify-between items-center">
+                        Os dados dos pacientes ficam seguros?
+                        <span class="text-2xl">+</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">
+                        Absolutamente! Todos os dados ficam armazenados localmente no seu computador/servidor. Seguimos rigorosamente as normas da LGPD para proteção de dados médicos.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-5xl font-extrabold mb-6">O que dizem nossos clientes</h2>
+                <p class="text-slate-600 text-xl">Médicos e clínicas que confiam no ClínicaSys Pro</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-slate-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-2 mb-4 text-yellow-400 text-xl">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-slate-700 italic mb-6 leading-relaxed">
+                        "A IA realmente economiza muito tempo. O que eu levava 15 minutos para documentar, agora leva 3 minutos. Impressionante!"
+                    </p>
+                    <div class="font-bold text-slate-900">Dr. Ricardo Santos</div>
+                    <div class="text-slate-600 text-sm">Cardiologista - Curitiba/PR</div>
+                </div>
+                
+                <div class="feature-card bg-slate-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-2 mb-4 text-yellow-400 text-xl">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-slate-700 italic mb-6 leading-relaxed">
+                        "O painel de TV deixou nossa recepção muito mais moderna. Os pacientes sempre elogiam a organização!"
+                    </p>
+                    <div class="font-bold text-slate-900">Dra. Mariana Costa</div>
+                    <div class="text-slate-600 text-sm">Clínica Pediátrica - São Paulo/SP</div>
+                </div>
+                
+                <div class="feature-card bg-slate-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-2 mb-4 text-yellow-400 text-xl">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-slate-700 italic mb-6 leading-relaxed">
+                        "Melhor custo-benefício do mercado. Pagamento único foi decisivo para nossa clínica. Recomendo muito!"
+                    </p>
+                    <div class="font-bold text-slate-900">Dr. Fernando Lima</div>
+                    <div class="text-slate-600 text-sm">Ortopedista - Belo Horizonte/MG</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-28 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
+                Transforme sua clínica<br>
+                <span class="text-emerald-400">ainda hoje</span>
+            </h2>
+            <p class="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Junte-se a centenas de médicos que já modernizaram sua gestão com o ClínicaSys Pro. 
+                Apenas <strong class="text-white">R$ 287,00</strong> para ter acesso vitalício.
+            </p>
+            
+            <a href="https://wa.me/5541996080232?text=Olá, quero garantir minha licença vitalícia por 287 reais." 
+               class="inline-block bg-green-500 hover:bg-green-600 text-white font-black py-7 px-16 rounded-2xl text-3xl shadow-2xl transition-all duration-300 transform hover:scale-105 mb-8">
+               💬 Falar com Especialista Agora
+            </a>
+            
+            <div class="flex flex-wrap justify-center gap-8 text-slate-400 text-sm">
+                <span>✓ Resposta em minutos</span>
+                <span>✓ Sem compromisso</span>
+                <span>✓ Tire todas suas dúvidas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="font-black text-2xl text-white mb-4">ClínicaSys Pro</div>
+                    <p class="text-sm leading-relaxed">
+                        Software médico completo com Inteligência Artificial para modernizar sua clínica.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Prontuário Eletrônico SOAP</li>
+                        <li>• Inteligência Artificial</li>
+                        <li>• Painel de TV</li>
+                        <li>• Gestão Financeira</li>
+                        <li>• Agenda Médica</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>📱 (41) 99608-0232</li>
+                        <li>📍 Curitiba - PR</li>
+                        <li>💬 Suporte via WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 text-center">
+                <p class="text-sm mb-2">ClínicaSys Pro © 2025. Todos os direitos reservados.</p>
+                <p class="text-xs text-slate-500">
+                    Sistema em conformidade com LGPD | Dados armazenados localmente
+                </p>
+            </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5541996080232?text=Olá, quero saber mais sobre o ClínicaSys Pro." 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-2xl z-50 transition-all duration-300 transform hover:scale-110"
+       title="Falar no WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
 
 </body>
 </html>
